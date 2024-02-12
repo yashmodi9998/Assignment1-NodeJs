@@ -1,0 +1,14 @@
+extends common/layout
+block layout-content 
+    div.container
+        div.row
+            each product in items 
+                div.col-4
+                    div.card.mb-3
+                        .card-body
+                            h5.card-title #{product.name}
+                            p.card-text.text-muted #{product.category}
+                            p.card-text #{product.description}
+                            p.card-text Price:#{product.price}
+                            p.card-text Quantiy:#{product.quantity_available}
+

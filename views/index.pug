@@ -1,0 +1,15 @@
+extends common/layout
+block layout-content 
+    div.container
+        section#home-images
+            img(src='/image1.jpg', alt='Image 1', class='home-image', onclick="location.href='/products'")
+            img(src='/image2.jpg', alt='Image 2', class='home-image', onclick="location.href='/products'")
+            img(src='/image3.jpg', alt='Image 3', class='home-image', onclick="location.href='/products'")
+
+        section#cta-section
+            h2 Check Out Our Products
+            p Explore our range of high-quality supplements to support your fitness journey.
+
+        div.cta-buttons
+            a(href='/products', class='btn btn-primary') View Products
+            a(href='/add-product', class='btn btn-secondary') Ask for New Product

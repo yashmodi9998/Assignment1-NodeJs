@@ -1,0 +1,29 @@
+extends common/layout
+block layout-content 
+
+    .container
+        .row.justify-content-center
+            .col-md-6     
+                form(action="/products/new", method="post")
+                    .mb-3
+                        label(for="name", class="form-label") Name
+                        input(type="text", class="form-control", id="name", name="name", required)
+
+                    .mb-3
+                        label(for="category", class="form-label") Category
+                        input(type="text", class="form-control", id="category", name="category", required)
+
+                    .mb-3
+                        label(for="price", class="form-label") Price
+                        input(type="number", class="form-control", id="price", name="price", step="0.01", required)
+
+                    .mb-3
+                        label(for="quantity_available", class="form-label") Quantity Available
+                        input(type="number", class="form-control", id="quantity_available", name="quantity_available", required)
+
+                    .mb-3
+                        label(for="description", class="form-label") Description
+                        textarea(class="form-control", id="description", name="description", rows="3", required)
+
+                    .mb-3
+                        button(type="submit", class="btn btn-primary") Add Supplement
