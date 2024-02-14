@@ -16,5 +16,9 @@ async function getProducts() {
   res = await results.toArray();
   return res;
 }
-
-module.exports = { getProducts };
+async function addProduct(product) {
+  db = await connection();
+  var status = await db.collection("products").insertOne(product);
+  console.log("states " + status);
+}
+module.exports = { getProducts, addProduct };

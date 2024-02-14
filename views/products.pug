@@ -1,11 +1,19 @@
 extends common/layout
-block layout-content 
+block layout-content
+ 
     div.container
         div.row
             each product in items 
                 div.col-4
                     div.card.mb-3
                         .card-body
+                            if product.category === "Creatine"
+                                img.card-img-top(src="/images/creatine.jpg", alt="Amino Acids Image")
+                            else if product.category === "Protein"
+                                img.card-img-top(src="/images/protein.jpg", alt="Default Image")
+                            else 
+                                img.card-img-top(src="/images/antioxident.jpg", alt="Default Image")
+
                             h5.card-title #{product.name}
                             p.card-text.text-muted #{product.category}
                             p.card-text #{product.description}

@@ -1,8 +1,9 @@
 extends common/layout
 block layout-content 
-
+    .container 
+        h2 Add new Product
     .container
-        .row.justify-content-center
+        .row
             .col-md-6     
                 form(action="/products/new", method="post")
                     .mb-3
