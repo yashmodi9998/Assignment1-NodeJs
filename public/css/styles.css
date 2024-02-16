@@ -5,6 +5,7 @@ header {}
 
 .navbar-brand {
   margin-left: 20px;
+
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -33,8 +34,13 @@ header {}
 
 }
 
-.txt_color {
-  color: var(--bs-blue-800);
+h5.card-title {
+  color: rgb(250, 10, 10);
+}
+
+.card-link {
+  text-align: center;
+  color: rgb(250, 10, 10);
 }
 
 .overlay {
@@ -63,4 +69,8 @@ header {}
 .img_products {
   object-fit: cover;
   height: 300px;
+}
+
+.social-icons a {
+  color: #ffffff;
 }
