@@ -1,15 +1,65 @@
 extends common/layout
 block layout-content 
+ 
     div.container
-        section#home-images
-            img(src='/image1.jpg', alt='Image 1', class='home-image', onclick="location.href='/products'")
-            img(src='/image2.jpg', alt='Image 2', class='home-image', onclick="location.href='/products'")
-            img(src='/image3.jpg', alt='Image 3', class='home-image', onclick="location.href='/products'")
-
-        section#cta-section
-            h2 Check Out Our Products
-            p Explore our range of high-quality supplements to support your fitness journey.
+        .row
+            .col-md-4
+                .image-container
+                    img(src='/images/protein.jpg', alt='Protein', class='img-fluid img_products')
+                    .overlay
+                        p Protein
+            .col-md-4
+                .image-container
+                    img(src='/images/antioxident.jpg', alt='Anti Oxidents', class='img-fluid img_products')
+                    .overlay
+                        p Anti Oxidents
+            .col-md-4
+                .image-container
+                    img(src='/images/preworkout.jpg', alt='Pre Workouts', class='img-fluid img_products')
+                    .overlay
+                        p Pre Workouts
+        .row
+            .col-md-6
+                .image-container
+                    img(src='/images/protein.jpg', alt='Protein', class='img-fluid img_products')
+                    .overlay
+                        p Protein
+            .col-md-6
+                .image-container
+                    img(src='/images/antioxident.jpg', alt='Anti Oxidents', class='img-fluid img_products')
+                    .overlay
+                        p Anti Oxidents
+            
+    .container
+        .row
+            h2.mb-4.text-center.display-6 Recent Blog Posts
+            .col
+                .card.mb-3
+                    .card-body
+                        h5.card-title.txt_color The Division of Responsibility in Feeding
+                        p.card-text.mb-2 
+                            small.text-muted Published on 12/11/2023
+                        p.card-text Struggling to get your children to eat? If so, you are not alone! This blog post highlights the fundamental aspects of the Division of Responsibility in feeding, its advantages, and its application in challenging food situations.
+                        a(href='#', class='card-link') Read More
+            
+            .col
+                .card.mb-3
+                    .card-body
+                        h5.card-title.text-blue800 The Scoop On Intermittent Fasting
+                        p.card-text.mb-2 
+                            small.text-muted Published on 23/10/2023
+                        p.card-text You might be wondering about intermittent fasting for health, longevity and managing body weight. If you are confused about the common question, “how often should I eat?” and want the advice of a Dietitian, this article is for you. 
+                        a(href='#', class='card-link') Read More
+            
+            .col
+                .card.mb-3
+                    .card-body
+                        h5.card-title Dim Sum Stuffed Peppers
+                        p.card-text.mb-2 
+                            small.text-muted Published on 15/09/2022
+                        p.card-text Are you a fan of dim sum and wondering how to bring it to your dinner table? Try these dim sum shrimp-stuffed green peppers that are easy to prepare and packed with incredible flavour and nutrients!
+                        a(href='#', class='card-link') Read More
 
         div.cta-buttons
             a(href='/products', class='btn btn-primary') View Products
-            a(href='/add-product', class='btn btn-secondary') Ask for New Product
+            a(href='/admin', class='btn btn-secondary') Ask for New Product

@@ -10,8 +10,13 @@ router.get("/", (req, res) => {
 });
 
 router.get("/admin", async (req, res) => {
-  let products = await model.getProducts();
-  res.render("admin", { title: "Admin", items: products });
+  try {
+    let products = await model.getProducts();
+    res.render("admin", { title: "Admin", items: products });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 router.get("/products", async (req, res) => {
@@ -23,28 +28,29 @@ router.get("/products", async (req, res) => {
     console.error(error);
     res.status(500).send("Internal Server Error");
   }
-  // finally {
-  //   // Close the connection when done
-  //   await client.close();
-  // }
 });
 
 router.post("/products/new", async (request, response) => {
-  let name = request.body.name;
-  let category = request.body.category;
-  let price = request.body.price;
-  let quantity_available = request.body.quantity_available;
-  let description = request.body.description;
+  try {
+    let name = request.body.name;
+    let category = request.body.category;
+    let price = request.body.price;
+    let quantity_available = request.body.quantity_available;
+    let description = request.body.description;
 
-  var newProduct = {
-    name: name,
-    category: category,
-    price: price,
-    quantity_available: quantity_available,
-    description: description,
-  };
-  await model.addProduct(newProduct);
-  response.redirect("/products"); //redirect back to admin page
+    var newProduct = {
+      name: name,
+      category: category,
+      price: price,
+      quantity_available: quantity_available,
+      description: description,
+    };
+    await model.addProduct(newProduct);
+    response.redirect("/products");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 module.exports = router;

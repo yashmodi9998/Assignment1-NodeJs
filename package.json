@@ -8,7 +8,7 @@
     "dev": "nodemon ./index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yash Modi",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.2",

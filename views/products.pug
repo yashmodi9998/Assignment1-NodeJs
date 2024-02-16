@@ -2,21 +2,26 @@ extends common/layout
 block layout-content
  
     div.container
-        div.row
+        h2.mb-4.text-center.display-5  Our Products
+        div.row.row-cols-4
             each product in items 
-                div.col-4
-                    div.card.mb-3
+                div.col-md-3.mb-4
+                    div.card
                         .card-body
                             if product.category === "Creatine"
-                                img.card-img-top(src="/images/creatine.jpg", alt="Amino Acids Image")
+                                img.card-img-top(src="/images/creatine.jpg", alt="Amino Acids Image", class="img_size")
                             else if product.category === "Protein"
-                                img.card-img-top(src="/images/protein.jpg", alt="Default Image")
-                            else 
-                                img.card-img-top(src="/images/antioxident.jpg", alt="Default Image")
+                                img.card-img-top(src="/images/protein.jpg", alt="Protein" , class="img_size")
+                            else if product.category === "Antioxidants"
+                                img.card-img-top(src="/images/antioxident.jpg", alt="antioxident", class="img_size")
+                            else if product.category === "Amino Acids"
+                                img.card-img-top(src="/images/aminoacids.jpg", alt="Amino Acids", class="img_size")
+                            else if product.category === "Pre-workout"
+                                img.card-img-top(src="/images/preworkout.jpg", alt="Pre Workout", class="img_size")
 
                             h5.card-title #{product.name}
                             p.card-text.text-muted #{product.category}
-                            p.card-text #{product.description}
-                            p.card-text Price:#{product.price}
-                            p.card-text Quantiy:#{product.quantity_available}
+                            p.card-text-body-secondary #{product.description}
+                            p.card-text Price: #{product.price} $
+                            p.card-text Quantiy: #{product.quantity_available}
 

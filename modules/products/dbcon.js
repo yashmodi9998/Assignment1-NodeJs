@@ -2,7 +2,13 @@ const { MongoClient, ObjectId } = require("mongodb");
 // const dbUrl = "mongodb://127.0.0.1:27017/supplements";
 const dotenv = require("dotenv");
 dotenv.config();
-const dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.kqwupps.mongodb.net/`;
+const defaultUser = "admin";
+const defaultPassword = "admin";
+
+// Use environment variables if available, otherwise use default values
+const username = process.env.DB_USER || defaultUser;
+const password = process.env.DB_PWD || defaultPassword;
+const dbUrl = `mongodb+srv://${username}:${password}@cluster0.kqwupps.mongodb.net/`;
 
 const client = new MongoClient(dbUrl);
 
