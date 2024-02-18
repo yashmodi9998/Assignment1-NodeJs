@@ -27,4 +27,14 @@ async function addProduct(product) {
   var status = await db.collection("products").insertOne(product);
   console.log("states " + status);
 }
-module.exports = { getProducts, addProduct };
+
+async function searchProducts(query) {
+  db = await connection();
+
+  const regexQuery = { name: { $regex: new RegExp(query, "i") } };
+
+  const products = await db.collection("products").find(regexQuery).toArray();
+
+  return products;
+}
+module.exports = { getProducts, addProduct, searchProducts };

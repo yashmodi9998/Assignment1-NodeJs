@@ -3,6 +3,11 @@ block layout-content
  
     div.container
         h2.mb-4.text-center.display-5  Our Products
+        form(action="/products/search", method="get",role="search", class="mb-4 d-flex")
+            .form-group.flex-grow-1
+                input.form-control(type="text", name="searchQuery", placeholder="Search products...")
+            button.btn.btn-light(type="submit") Search
+
         div.row.row-cols-4
             each product in items 
                 div.col-md-3.mb-4
