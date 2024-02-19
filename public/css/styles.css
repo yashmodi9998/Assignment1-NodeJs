@@ -1,12 +1,5 @@
-/* Option 2: Import via CSS */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-
-header {}
-
 .navbar-brand {
   margin-left: 20px;
-
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .navbar-nav {
@@ -19,7 +12,7 @@ header {}
 }
 
 .navbar-nav a.nav-link:hover {
-  color: #060606;
+  color: #264384;
 }
 
 .img_size {
@@ -29,20 +22,10 @@ header {}
 }
 
 h5.card-title {
-  color: rgb(250, 10, 10);
+  color: #264384;
 }
 
 .card-link {
   text-align: center;
-  color: rgb(250, 10, 10);
-}
-
-
-.img_products {
-  object-fit: cover;
-  height: 300px;
-}
-
-.social-icons a {
-  color: #ffffff;
+  color: #264384;
 }
