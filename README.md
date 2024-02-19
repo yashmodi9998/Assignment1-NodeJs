@@ -1,6 +1,6 @@
 # PumpUp Nutrition - Supplement Store Project
 
-Welcome to PumpUp Nutrition,This project is built using Express, Pug, MongoDB, and Node.js.
+Welcome to PumpUp Nutrition, This project is built using Express, Pug, MongoDB, and Node.js.
 
 ## Overview
 
@@ -24,9 +24,9 @@ PumpUp Nutrition is an online supplement store where users can explore and purch
 The project is structured as follows:
 
 - `index.js`: Main entry point for the Express application.
-- `views/`: Contains Pug templates for rendering pages.
+- `views/`: Contains plug templates for rendering pages.
 - `public/`: Holds static assets such as stylesheets, images, etc.
-- `modules/`: Includes route handlers for different pages and database connec.
+- `modules/`: Includes route handlers for different pages and database connectivity.
 
 
 ## Getting Started
@@ -40,7 +40,7 @@ Make sure you have the following installed:
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/pumpup-nutrition.git`
+1. Clone the repository: `git clone [https://github.com/yashmodi9998/Assignment1-NodeJs.git](https://github.com/yashmodi9998/Assignment1-NodeJs.git)`
 2. Install dependencies: `npm install`
 3. Start the server: `npm run dev`
 
