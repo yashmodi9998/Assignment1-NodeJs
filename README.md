@@ -7,10 +7,12 @@ Welcome to PumpUp Nutrition, This project is built using Express, Pug, MongoDB, 
 PumpUp Nutrition is an online supplement store where users can explore and purchase a variety of nutritional supplements. The project includes three main pages:
 
 1. **Home Page:**
+
    - A static page with visually appealing designs.
    - Introduces users to the PumpUp Nutrition store.
 
 2. **Product Page:**
+
    - Displays a list of supplements fetched from the MongoDB database.
    - Each supplement includes details such as name, category, description, price, and quantity available.
 
@@ -27,7 +29,6 @@ The project is structured as follows:
 - `views/`: Contains plug templates for rendering pages.
 - `public/`: Holds static assets such as stylesheets, images, etc.
 - `modules/`: Includes route handlers for different pages and database connectivity.
-
 
 ## Getting Started
 
@@ -51,7 +52,6 @@ Visit `http://localhost:8888` in your browser to explore the PumpUp Nutrition st
 - Navigate to the Home and Product pages to explore and purchase supplements.
 - Admins can manage in-stock products and add new products on the Admin page.
 
-
 ## Acknowledgments
-- All images used in this project are sourced from Freepik.
 
+- All images used in this project are sourced from Freepik.
