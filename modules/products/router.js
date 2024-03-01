@@ -56,7 +56,7 @@ router.post("/products/new", async (request, response) => {
 router.get("/products/search", async (req, res) => {
   try {
       const searchQuery = req.query.searchQuery || ""; // Get the search query from the request parameters
-      let products = await model.searchProducts(searchQuery); // Call a new function in your model to handle the search
+      let products = await model.searchProducts(searchQuery); //  handle the search product from search
       res.render("products", { title: "Products", items: products, searchQuery });
   } catch (error) {
       console.error(error);
